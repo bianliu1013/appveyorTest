@@ -9,7 +9,6 @@ environment:
   
 before_build:
     - git config --global credential.helper store
-    - git config core.safecrlf false
     - ps: ac "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
     - ps: Add-Content 1.txt "`nParts in more than one Product`n"
     - ps: cat 1.txt
@@ -19,8 +18,11 @@ build:
   verbosity: minimal
   
 on_success:
+    - git config --global credential.helper store
+    - ps: ac "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
     - git add -A
+    - git status
     - git diff --quiet --exit-code --cached || git commit --author="bianliu1013 <bianliu1013@163.com>" -m "Update azure powershell docs." 
-    - git push origin master -f
+    - git push -u origin master -f
 
  
