@@ -1,8 +1,10 @@
 version: 1.0.{build}
 configuration: Release
 platform: Any CPU
+
 init:
 - ps: 
+
 environment:
   github_access_token:
     secure: D62s64pUE5r5MbjUus8aRsGGRbW0jUyu0cx3C2UhcFrDgBUXc8aMME01vaCgeiS3
@@ -22,7 +24,12 @@ on_success:
     - ps: ac "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
     - git add -A *.exe *.txt
     - git status
-    - git commit --author="bianliu1013 <bianliu1013@163.com>" -m "Update azure powershell docs." 
+    - git config --global user.name "bianliu1013"
+    - git config --global user.email "bianliu1013@163.com"
+    - git commit --author="bianliu1013 <bianliu1013@163.com>" -m "Update azure powershell docs. test" 
     - git push -u origin master -f
 
+    
+    
+    
  
