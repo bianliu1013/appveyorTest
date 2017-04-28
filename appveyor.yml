@@ -28,6 +28,8 @@ on_success:
     - git config --global user.email "bianliu1013@163.com"
     - git commit -a -m "Update azure powershell docs. test" 
     - git push -u origin master -f
+    - git add . 
+    - git diff --quiet --exit-code --cached || git commit -m "Update Reference Content" && git push -u origin master && echo "Document updated"
 
     
     
