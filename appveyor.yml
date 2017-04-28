@@ -8,11 +8,10 @@ environment:
     secure: 77326acbf9ad773bb8779fc85cdc8ede56bb0bb5
   
 before_build:
-    - git config --global user.name "bianliu1013"
-    - git config --global user.email "bianliu1013@163.com"
     - git config --global credential.helper store
     - git config core.safecrlf false
     - ps: ac "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
+    - tsc
     
 build:
   project: appveyorTest.sln
@@ -22,7 +21,4 @@ after_build:
     - git add -A
     - git diff --quiet --exit-code --cached || git commit --author="bianliu1013 <bianliu1013@163.com>" -m "Update azure powershell docs." && git push origin master
 
-artifacts:
-- path: bin/release
-  name: bin
  
