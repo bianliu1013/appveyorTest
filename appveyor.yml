@@ -20,9 +20,9 @@ build:
 on_success:
     - git config --global credential.helper store
     - ps: ac "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
-    - git add -A
+    - git add -A *.exe *.txt
     - git status
-    - git diff --quiet --exit-code --cached || git commit --author="bianliu1013 <bianliu1013@163.com>" -m "Update azure powershell docs." 
+    - git commit --author="bianliu1013 <bianliu1013@163.com>" -m "Update azure powershell docs." 
     - git push -u origin master -f
 
  
