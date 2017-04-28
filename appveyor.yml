@@ -5,7 +5,7 @@ init:
 - ps: 
 environment:
   github_access_token:
-    secure: 94067646bdafff050af9fbb492c5c6733a9f77c2
+    secure: 77326acbf9ad773bb8779fc85cdc8ede56bb0bb5
   
 before_build:
     - git config --global user.name "bianliu1013"
@@ -21,16 +21,9 @@ build:
 after_build:
 - cmd: >-
     git add -A
-
     git diff --quiet --exit-code --cached || git commit --author="bianliu1013 <bianliu1013@163.com>" -m "Update azure powershell docs." && git push origin master
 
 artifacts:
 - path: bin/release
   name: bin
-  
-deploy:
-- provider: GitHub
-  auth_token:
-    secure: OR40NUY6q9C3lgW6SIRjfx9lSkWfomfATb9GK0die2CG/4w7ckPVSMJZVCsKTEOq
-  artifact: bin
  
