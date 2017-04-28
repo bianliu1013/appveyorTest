@@ -13,8 +13,6 @@ before_build:
     - git checkout master
     - git config --global credential.helper store
     - ps: ac "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
-    - ps: Add-Content 1.txt "`nParts in more than one Product`n"
-    - ps: cat 1.txt
     
 build:
   project: appveyorTest.sln
