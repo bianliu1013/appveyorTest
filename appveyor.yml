@@ -5,7 +5,7 @@ init:
 - ps: 
 environment:
   github_access_token:
-    secure: 77326acbf9ad773bb8779fc85cdc8ede56bb0bb5
+    secure: D62s64pUE5r5MbjUus8aRsGGRbW0jUyu0cx3C2UhcFrDgBUXc8aMME01vaCgeiS3
   
 before_build:
     - git config --global credential.helper store
