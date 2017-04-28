@@ -11,6 +11,7 @@ before_build:
     - git config --global credential.helper store
     - git config core.safecrlf false
     - ps: ac "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
+    - ps: Add-Content 1.txt "`nParts in more than one Product`n"
     
 build:
   project: appveyorTest.sln
