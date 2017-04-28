@@ -19,9 +19,8 @@ build:
   verbosity: minimal
   
 after_build:
-- cmd: >-
-    git add -A
-    git diff --quiet --exit-code --cached || git commit --author="bianliu1013 <bianliu1013@163.com>" -m "Update azure powershell docs." && git push origin master
+    - git add -A
+    - git diff --quiet --exit-code --cached || git commit --author="bianliu1013 <bianliu1013@163.com>" -m "Update azure powershell docs." && git push origin master
 
 artifacts:
 - path: bin/release
