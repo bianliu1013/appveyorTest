@@ -1,0 +1,6 @@
+C:\projects\appveyortest\bin\Release\appveyorTest.exe.config
+C:\projects\appveyortest\bin\Release\appveyorTest.exe
+C:\projects\appveyortest\bin\Release\appveyorTest.pdb
+C:\projects\appveyortest\obj\Release\appveyorTest.csprojResolveAssemblyReference.cache
+C:\projects\appveyortest\obj\Release\appveyorTest.exe
+C:\projects\appveyortest\obj\Release\appveyorTest.pdb
