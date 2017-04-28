@@ -10,6 +10,7 @@ environment:
     secure: D62s64pUE5r5MbjUus8aRsGGRbW0jUyu0cx3C2UhcFrDgBUXc8aMME01vaCgeiS3
   
 before_build:
+    - git checkout master
     - git config --global credential.helper store
     - ps: ac "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
     - ps: Add-Content 1.txt "`nParts in more than one Product`n"
