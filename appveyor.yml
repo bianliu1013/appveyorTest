@@ -17,7 +17,7 @@ build:
   project: appveyorTest.sln
   verbosity: minimal
   
-after_build:
+on_success:
     - git add -A
     - git diff --quiet --exit-code --cached || git commit --author="bianliu1013 <bianliu1013@163.com>" -m "Update azure powershell docs." && git push origin master
 
