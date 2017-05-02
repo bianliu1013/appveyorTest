@@ -12,7 +12,7 @@ environment:
 before_build:
     - git checkout master
     - git config --global credential.helper store
-    - ps: ac "$env:USERPROFILE\.git-credentials" "https://D62s64pUE5r5MbjUus8aRsGGRbW0jUyu0cx3C2UhcFrDgBUXc8aMME01vaCgeiS3:x-oauth-basic@github.com`n"
+    - ps: ac "$env:USERPROFILE\.git-credentials" "https://$(D62s64pUE5r5MbjUus8aRsGGRbW0jUyu0cx3C2UhcFrDgBUXc8aMME01vaCgeiS3):x-oauth-basic@github.com`n"
     
 build:
   project: appveyorTest.sln
