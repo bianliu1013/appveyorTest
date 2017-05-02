@@ -6,7 +6,7 @@ init:
 - ps: 
 
 environment:
-  my_variable:
+  github_access_token:
     secure: kXK95TSkOJShIcqMV91li5J1hbpfUrN8zVML962Ob4lvm1lA2guZzyk1iwgk/Cud
   
 before_build:
