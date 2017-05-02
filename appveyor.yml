@@ -6,8 +6,8 @@ init:
 - ps: 
 
 environment:
-  github_access_token:
-    secure: D62s64pUE5r5MbjUus8aRsGGRbW0jUyu0cx3C2UhcFrDgBUXc8aMME01vaCgeiS3
+  my_variable:
+    secure: kXK95TSkOJShIcqMV91li5J1hbpfUrN8zVML962Ob4lvm1lA2guZzyk1iwgk/Cud
   
 before_build:
     - git checkout master
