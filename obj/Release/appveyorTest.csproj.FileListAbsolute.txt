@@ -4,3 +4,9 @@ C:\projects\appveyortest\bin\Release\appveyorTest.pdb
 C:\projects\appveyortest\obj\Release\appveyorTest.csprojResolveAssemblyReference.cache
 C:\projects\appveyortest\obj\Release\appveyorTest.exe
 C:\projects\appveyortest\obj\Release\appveyorTest.pdb
+C:\projects\appveyortest-ym9in\bin\Release\appveyorTest.exe.config
+C:\projects\appveyortest-ym9in\bin\Release\appveyorTest.exe
+C:\projects\appveyortest-ym9in\bin\Release\appveyorTest.pdb
+C:\projects\appveyortest-ym9in\obj\Release\appveyorTest.csprojResolveAssemblyReference.cache
+C:\projects\appveyortest-ym9in\obj\Release\appveyorTest.exe
+C:\projects\appveyortest-ym9in\obj\Release\appveyorTest.pdb
